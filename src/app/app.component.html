@@ -1,0 +1,64 @@
+<!-- <app-header></app-header>
+<br />
+<div class="container">
+  <div class="jumbotron">
+    <h1 class="display-4" style="text-align: center">Angular Pozdrav!</h1> -->
+    <!-- <p class="lead"></p>
+    <hr class="my-4">
+    <p>Namerno je ubacen Bootstrap 4, da probam, jer na vezbama radimo sa Bootstrap 3</p> -->
+    <!-- <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a> -->
+  <!-- </div> -->
+  <!-- <div class="container">
+    <div class="row">
+
+    </div>
+  </div>
+  <div class="col-md-3">
+    Username: <input type="text" [(ngModel)]="username" />
+  </div>
+  <br />
+  <div class="col-md-3">
+    <p>{{ username }}</p>
+    <button class="btn btn-primary" (click)="resetUsername()" [disabled]="username === ''">Reset</button>
+  </div> -->
+
+  <!-- <div class="col-md-6 offset-md-3">
+    <div class="card card-body bg-light">
+      <h3 style="text-align: center">Login Form</h3>
+
+      <div class="from-group">
+        <label>Username: </label>
+        <input class="form-control" type="text" [(ngModel)]="username" />
+      </div>
+      <div class="from-group">
+        <label>Password: </label>
+        <input class="form-control" type="password" [(ngModel)]="password" />
+      </div>
+      <br />
+      <div class="form-row">
+        <div class="col text-center">
+          <button type="submit" (click)="addUser()" class="btn btn-primary btn-lg" [disabled]="username === ''"> Login</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br />
+  <p *ngIf="userCreated ; else noUser"></p>
+  <ng-template #noUser>
+      <p>Nije ulogovan ni jedan korisnik!</p>
+  </ng-template>
+  <div *ngFor="let user of users; let i = index">
+    <p>Korisnik sa korisničkim imenom: <b>[{{ i }}] {{ user.username }}</b> se ulogovao u vreme: <b>{{ vreme | date:'medium' }}</b></p>
+  </div>
+  
+</div> -->
+
+<app-header (featureSelected)="onNavigate($event)"></app-header>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <app-zahtevi *ngIf="loadedFeature === 'zahtevi'"></app-zahtevi>
+            <app-zadatak *ngIf="loadedFeature !== 'zahtevi'"></app-zadatak>
+        </div>
+    </div>
+</div>
